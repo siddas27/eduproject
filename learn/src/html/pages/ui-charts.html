@@ -1,0 +1,58 @@
+---
+title: Charts
+slug: charts
+---
+{% extends "layouts/components.html" %}
+
+{% block page %}
+<ol class="breadcrumb">
+	<li><a href="#">Home</a></li>
+	<li class="active">Charts</li>
+</ol>
+
+<div class="card">
+	<div class="card-block">
+		<div id="line" style="width: 100%; height:230px;"></div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-6">
+		<div class="card">
+			<div class="card-block">
+				<div id="donut" style="width: 100%; height:230px;"></div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="card">
+			<div class="card-block">
+				<div id="bar" style="width: 100%; height:230px;"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="card">
+	<div class="card-block">
+		<div id="area" style="width: 100%; height:230px;"></div>
+	</div>
+</div>
+{% endblock %}
+
+{% block vendor_styling %}
+	<!-- Vendor CSS -->
+	<link rel="stylesheet" href="examples/css/morris.min.css">
+{% endblock %}
+
+{% block vendor_scripts %}
+	<!-- Theme Colors -->
+	<script src="assets/js/colors.js"></script>
+
+	<!-- Required by CHART (morrisjs) -->
+	<script src="assets/vendor/raphael-min.js"></script>
+	<script src="assets/vendor/morris.min.js"></script>
+{% endblock%}
+
+{% block example_scripts %}
+	<!-- Init -->
+	<script src="examples/js/chart.js"></script>
+{% endblock %}

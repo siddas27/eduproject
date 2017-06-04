@@ -1,0 +1,7 @@
+@include media-breakpoint-up(md) {
+	.sidebar-transparent-md {
+		background: none !important;
+		&.sidebar-left { border-right: none; }
+		&.sidebar-right { border-left: none; }
+	}
+}

@@ -1,0 +1,21 @@
+.sidebar-filter {
+	list-style: none;
+	padding: 0 1.25rem;
+	li {
+		i {
+			font-size: .8rem;
+			position: relative;
+			top: -2px;
+			margin-right:10px;
+		}
+		a {
+			color: $text-muted;
+			padding: .325rem 0;
+			display:block;
+			&:hover {
+				text-decoration:none;
+				color:$brand-primary;
+			}
+		}
+	}
+}

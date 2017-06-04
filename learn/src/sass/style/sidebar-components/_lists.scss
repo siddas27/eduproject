@@ -1,0 +1,15 @@
+.sidebar .list-group-fit {
+	border-top: 1px solid $border-color;
+	border-bottom: 1px solid $border-color;
+	.active a, 
+	.active a:hover {
+		color:#fff;
+	}
+	a {
+		color: $body-color;
+	}
+	a:hover {
+		text-decoration:none;
+		color: $brand-primary;
+	}	
+}

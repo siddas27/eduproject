@@ -1,0 +1,89 @@
+---
+title: My Courses
+slug: my-courses
+---
+{% extends "layouts/fluid.html" %}
+
+{% block page %}
+<ol class="breadcrumb m-b-0">
+	<li><a href="index.html">Home</a></li>
+	<li class="active">My Courses</li>
+</ol>
+<div class="page-heading text-md-right">
+	<div class="btn-group">
+		<a href="#" class="btn btn-white active"><i class="material-icons">list</i></a>
+		<a href="#" class="btn btn-white"><i class="material-icons">dashboard</i></a>
+	</div>
+</div>
+<div class="card-columns">
+	<div class="card">		
+		<div class="card-header bg-white ">
+			<h4 class="card-title"><a href="take-course.html">Learn VueJs the easy way!</a></h4>
+			<small class="text-muted">Lessons: 3 of 7</small>
+		</div>	
+		<progress class="progress progress-primary progress-striped m-b-0" value="40" max="100">40%</progress>		
+		<div class="card-footer bg-white">
+			<a href="take-course.html" class="btn btn-primary btn-sm"> Continue <i class="material-icons">play_circle_outline</i></a>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="card-button-wrapper">
+			<a href="take-course.html" class="btn btn-white btn-sm"><i class="material-icons">replay</i> </a> 
+		</div>
+		<div class="card-header bg-white ">
+			<h4 class="card-title"><a href="#">Npm &amp; Gulp Advanced Workflow</a></h4>
+			<small class="text-muted">Lessons: 7 of 7</small>
+		</div>
+		<progress class="progress progress-success progress-striped m-b-0" value="100" max="100">56%</progress>
+		<div class="card-footer bg-white ">
+			<a href="take-course.html" class="btn btn-success disabled btn-sm">Completed <i class="material-icons">check</i></a>
+		</div>
+	</div>
+
+
+	<div class="card">
+		<div class="card-button-wrapper">
+			<a href="take-course.html" class="btn btn-white btn-sm"><i class="material-icons">replay</i> </a> 
+		</div>
+		<div class="card-header bg-white ">
+			<h4 class="card-title"><a href="#">Github Webhooks for Beginners</a></h4>
+			<small class="text-muted">Lessons: 8 of 10</small>
+		</div>
+		<progress class="progress progress-primary progress-striped m-b-0" value="80" max="100">56%</progress>
+		<div class="card-footer bg-white">
+			<a href="take-course.html" class="btn btn-primary btn-sm">Continue <i class="material-icons">play_circle_outline</i></a>
+		</div>
+	</div>
+
+
+	<div class="card">
+		<div class="card-button-wrapper">
+			<a href="take-course.html" class="btn btn-white btn-sm"><i class="material-icons">replay</i> </a> 
+		</div>
+		<div class="card-header bg-white ">
+			<h4 class="card-title"><a href="#">Gulp and Slush</a></h4>
+			<small class="text-muted">Lessons: 5 of 7</small>
+		</div>
+		<progress class="progress progress-primary progress-striped m-b-0" value="56" max="100">56%</progress>
+		<div class="card-footer bg-white">
+			<a href="take-course.html" class="btn btn-primary btn-sm">Continue <i class="material-icons">play_circle_outline</i></a>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="card-button-wrapper">
+			<a href="take-course.html" class="btn btn-white btn-sm"><i class="material-icons">replay</i> </a> 
+		</div>
+		<div class="card-header bg-white ">
+			<h4 class="card-title"><a href="#">VueJs</a></h4>
+			<small class="text-muted">Lessons: 3 of 7</small>
+		</div>
+		<progress class="progress progress-primary progress-striped m-b-0" value="40" max="100">56%</progress>
+		<div class="card-footer bg-white">
+			<a href="take-course.html" class="btn btn-primary btn-sm">Continue <i class="material-icons">play_circle_outline</i></a>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

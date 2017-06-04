@@ -1,0 +1,15 @@
+.btn i.material-icons { 
+	position:relative;
+	top:-1px;
+	font-size:20px;
+}
+.btn-sm i.material-icons { 
+	font-size:16px;
+}
+
+.btn-white.active, .btn-white.active:hover {
+	background: $brand-primary;
+	color: #fff;
+	border-color: darken($brand-primary, 10%) !important;
+}
+

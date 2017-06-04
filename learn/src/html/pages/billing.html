@@ -1,0 +1,58 @@
+---
+title: Billing
+slug: billing
+---
+{% extends "layouts/fluid.html" %}
+
+{% block page %}
+<ol class="breadcrumb m-b-0">
+	<li><a href="#">Home</a></li>
+	<li class="active">Payment History</li>
+</ol>
+<h4  class="page-heading">Payment History</h4>
+<div class="card card-stats-danger">
+	<div class="card-block">
+		<div class="media">
+			<div class="media-body media-middle">
+				Please pay your amount due 
+				<strong class="text-danger">$25.00</strong> with invoice <a href="#">#8331</a>	
+			</div>
+			<div class="media-right">
+				<a href="pay.html" class="btn btn-success pull-xs-right btn-rounded">Pay Now</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="card">
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th>Date</th>
+				<th class="center">Amount</th>
+				<th class="center">Status</th>
+				<th class="center">View</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>12th February, 2016</td>
+				<td class="center">$25</td>
+				<td class="center"><i class="material-icons text-success md-18">lens</i></td>
+				<td class="center"><a href="invoice.html">#12199</a></td>
+			</tr>
+			<tr>
+				<td>12th January, 2016</td>
+				<td class="center">$25</td>
+				<td class="center"><i class="material-icons text-danger md-18">lens</i></td>
+				<td class="center"><a href="invoice.html">#8331</a></td>
+			</tr>
+			<tr>
+				<td>12th December, 2015</td>
+				<td class="center">$25</td>
+				<td class="center"><i class="material-icons text-success md-18">lens</i></td>
+				<td class="center"><a href="invoice.html">#2421</a></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+{% endblock %}

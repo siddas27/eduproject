@@ -1,0 +1,19 @@
+@media print {
+	body, .ls-top-navbar {
+		margin-top: 0 !important;
+	}
+
+	html, body {
+	    width: 210mm;
+	    height: 277mm;
+	}
+	#invoice > .card {
+		min-height: 277mm;
+		.row {
+			margin-bottom: 10mm;
+		}
+		.table {
+			margin-bottom: 10mm;
+		}
+	}
+}

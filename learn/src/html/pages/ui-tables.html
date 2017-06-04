@@ -1,0 +1,190 @@
+---
+title: Tables
+slug: tables
+---
+{% extends "layouts/components.html" %}
+
+{% block page %}
+<ol class="breadcrumb">
+	<li><a href="#">Home</a></li>
+	<li class="active">Tables</li>
+</ol>
+<div class="card">
+	<div class="card-header">
+		<h5 class="card-title">Data Tables</h5>          
+	</div>
+	<table id="datatable-example" class="table table-striped table-hover table-sm">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Position</th>
+				<th>Office</th>
+				<th>Extn.</th>
+				<th>Start date</th>
+				<th>Salary</th>
+			</tr>
+		</thead>
+	</table>
+	<div class="clearfix"></div>
+</div>
+
+<div class="card">
+	<div class="card-header">Basic Table</div>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Username</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th scope="row">1</th>
+				<td>Mark</td>
+				<td>Otto</td>
+				<td>@mdo</td>
+			</tr>
+			<tr>
+				<th scope="row">2</th>
+				<td>Jacob</td>
+				<td>Thornton</td>
+				<td>@fat</td>
+			</tr>
+			<tr>
+				<th scope="row">3</th>
+				<td>Larry</td>
+				<td>the Bird</td>
+				<td>@twitter</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<div class="card">
+	<div class="card-header">Bordered Table</div>
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Username</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th scope="row">1</th>
+				<td>Mark</td>
+				<td>Otto</td>
+				<td>@mdo</td>
+			</tr>
+			<tr>
+				<th scope="row">2</th>
+				<td>Mark</td>
+				<td>Otto</td>
+				<td>@TwBootstrap</td>
+			</tr>
+			<tr>
+				<th scope="row">3</th>
+				<td>Jacob</td>
+				<td>Thornton</td>
+				<td>@fat</td>
+			</tr>
+			<tr>
+				<th scope="row">4</th>
+				<td colspan="2">Larry the Bird</td>
+				<td>@twitter</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<div class="card">
+	<div class="card-header">Contextual Classes</div>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Column heading</th>
+				<th>Column heading</th>
+				<th>Column heading</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="table-active">
+				<th scope="row">1</th>
+				<td>Column content</td>
+				<td>Column content</td>
+				<td>Column content</td>
+			</tr>
+			<tr>
+				<th scope="row">2</th>
+				<td>Column content</td>
+				<td>Column content</td>
+				<td>Column content</td>
+			</tr>
+			<tr class="table-success">
+				<th scope="row">3</th>
+				<td>Column content</td>
+				<td>Column content</td>
+				<td>Column content</td>
+			</tr>
+			<tr>
+				<th scope="row">4</th>
+				<td>Column content</td>
+				<td>Column content</td>
+				<td>Column content</td>
+			</tr>
+			<tr class="table-info">
+				<th scope="row">5</th>
+				<td>Column content</td>
+				<td>Column content</td>
+				<td>Column content</td>
+			</tr>
+			<tr>
+				<th scope="row">6</th>
+				<td>Column content</td>
+				<td>Column content</td>
+				<td>Column content</td>
+			</tr>
+			<tr class="table-warning">
+				<th scope="row">7</th>
+				<td>Column content</td>
+				<td>Column content</td>
+				<td>Column content</td>
+			</tr>
+			<tr>
+				<th scope="row">8</th>
+				<td>Column content</td>
+				<td>Column content</td>
+				<td>Column content</td>
+			</tr>
+			<tr class="table-danger">
+				<th scope="row">9</th>
+				<td>Column content</td>
+				<td>Column content</td>
+				<td>Column content</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+{% endblock %}
+
+{% block vendor_styling %}
+	<!-- Vendor CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontawesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="examples/css/datatables.min.css">
+{% endblock %}
+
+{% block vendor_scripts %}
+	<!-- Vendor JS -->
+	<script src="assets/vendor/jquery.dataTables.min.js"></script>
+	<script src="assets/vendor/datatables-bootstrap3.min.js"></script>
+{% endblock%}
+
+{% block example_scripts %}
+	<!-- Initialize -->
+	<script src="examples/js/datatables.js"></script>
+{% endblock %}

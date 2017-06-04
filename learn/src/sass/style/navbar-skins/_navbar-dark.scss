@@ -1,0 +1,15 @@
+.navbar-dark {
+	.navbar-nav .nav-link:hover {
+		color: #fff;
+	}
+	.dropdown-item:hover {
+		color: $brand-primary;
+		background:none;
+	}
+	.nav-stats  {
+		background: rgba(0,0,0, .2);
+		small {
+			opacity:.54;
+		}
+	}
+}

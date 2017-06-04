@@ -1,0 +1,62 @@
+///////////////
+// VARIABLES //
+///////////////
+
+@import './variables';
+
+////////////////////
+// DEFAULT STYLE  //
+// AdminPlus Lite //
+////////////////////
+
+@import 'adminplus/src/sass/style';
+
+////////////////////////////
+// LEARNPLUS STYLE        //
+// Extends AdminPlus Lite //
+////////////////////////////
+
+// CUSTOM LAYOUT
+@import './layout/content';
+
+// CUSTOM NAVBAR COMPONENTS
+@import './navbar-components/notifications';
+@import './navbar-components/form';
+@import './navbar-components/menu';
+@import './navbar-components/dropdown';
+@import './navbar-components/stats';
+@import './navbar-components/brand';
+
+// CUSTOM NAVBAR SKINS
+@import './navbar-skins/navbar-dark';
+
+// CUSTOM SIDEBAR COMPONENTS
+@import './sidebar-components/core';
+@import './sidebar-components/activity';
+@import './sidebar-components/email';
+@import './sidebar-components/user';
+@import './sidebar-components/stats';
+@import './sidebar-components/lists';
+@import './sidebar-components/filter';
+@import './sidebar-components/menu';
+
+// CUSTOM SIDEBAR SKINS
+@import './sidebar-skins/sidebar-transparent';
+
+// CUSTOM PAGE STYLE
+@import './scaffolding';
+
+// OTHER UI
+@import './buttons';
+@import './cards';
+@import './helpers';
+@import './tables';
+@import './tabs';
+@import './list-group';
+@import './custom-forms';
+@import './switch';
+
+// PAGES
+@import './pages/chat';
+@import './pages/invoice';
+@import './pages/forum';

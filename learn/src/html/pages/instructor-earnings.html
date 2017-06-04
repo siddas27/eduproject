@@ -1,0 +1,136 @@
+---
+title: Instructor Earnings
+slug: instructor-earnings
+---
+{% extends "layouts/instructor-fluid.html" %}
+
+{% block page %}
+<ol class="breadcrumb">
+	<li><a href="index.html">Home</a></li>
+	<li class="active">Earnings</li>
+</ol>
+<div class="card card-block">   
+	<div class="form-group pull-md-right">
+		<select class="c-select form-control">
+			<option selected>2015</option>
+			<option value="1">2014</option>
+			<option value="2">2013</option>
+			<option value="3">2012</option>
+		</select>
+	</div>
+	<div class="clearfix"></div>
+	<div id="bar" style="height: 300px;"></div>   
+</div>
+<div class="card">
+	<div class="card-header bg-white center">
+		<h5 class="card-title">Total <span class="text-primary">$19,239</span></h5>   
+	</div>
+	<table class="table table-striped m-b-0">
+		<thead>
+			<tr class="text-uppercase small">
+				<th>Course</th>
+				<th class="center" style="width:130px">Expense</th>
+				<th class="center" style="width:130px">Income</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					<div class="media">
+						<div class="media-left">
+							<img src="assets/images/vuejs.png" alt="" width="80" class="img-rounded">
+						</div>
+						<div class="media-body media-middle">
+							Vuejs Basics
+							<div class="text-muted small">34 Sales</div>	
+						</div>
+					</div>
+				</td>
+				<td class="center vertical-middle">
+					<span class="text-orange bold">&dollar;120</span>
+				</td>
+				<td class="center vertical-middle">
+					<span class="text-orange bold">&dollar;1,234</span>							
+				</td>
+			</tr>
+			<tr class="active">
+				<td>
+					<div class="media">
+						<div class="media-left">
+							<img src="assets/images/nodejs.png" alt="" width="80" class="img-rounded">
+						</div>
+						<div class="media-body media-middle">
+							NodeJs for Beginners
+							<div class="text-muted small">34 Sales</div>	
+						</div>
+					</div>
+				</td>
+				<td class="center vertical-middle">
+					<i class="material-icons text-muted-light">remove</i>
+				</td>
+				<td class="center vertical-middle">
+					<span class="text-green bold">&dollar;2,521</span>
+				</td>
+			</tr>
+			<tr class="active">
+				<td>
+					<div class="media">
+						<div class="media-left">
+							<img src="assets/images/gulp.png" alt="" width="80" class="img-rounded">
+						</div>
+						<div class="media-body">
+							Advanced Gulp Workflows
+							<div class="text-muted small">8 Sales</div>	
+						</div>
+					</div>
+				</td>
+				<td class="center vertical-middle">
+					<i class="material-icons text-muted-light">remove</i>
+				</td>
+				<td class="center vertical-middle">
+					<span class="text-green bold">&dollar;1,413</span>
+				</td>
+			</tr>
+			<tr class="active">
+				<td>
+					<div class="media">
+						<div class="media-left">
+							<img src="assets/images/github.png" alt="" width="80" class="img-rounded">
+						</div>
+						<div class="media-body media-middle">
+							Basics of GitHub
+							<div class="text-muted small">31 Sales</div>	
+						</div>
+					</div>
+				</td>
+				<td class="center vertical-middle">
+					<i class="material-icons text-muted-light">remove</i>
+				</td>
+				<td class="center vertical-middle">
+					<span class="text-green bold">&dollar;1,413</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+{% endblock %}
+
+
+{% block vendor_styling %}
+	<!-- Vendor CSS -->
+	<link rel="stylesheet" href="examples/css/morris.min.css">
+{% endblock %}
+
+{% block vendor_scripts %}
+	<!-- Theme Colors -->
+	<script src="assets/js/colors.js"></script>
+
+	<!-- Required by CHART (morrisjs) -->
+	<script src="assets/vendor/raphael-min.js"></script>
+	<script src="assets/vendor/morris.min.js"></script>
+{% endblock%}
+
+{% block example_scripts %}
+	<!-- Init -->
+	<script src="examples/js/chart.js"></script>
+{% endblock %}

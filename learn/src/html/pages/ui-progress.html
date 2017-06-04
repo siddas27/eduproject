@@ -1,0 +1,31 @@
+---
+title: Progress Bars
+slug: progress
+---
+{% extends "layouts/components.html" %}
+
+{% block page %}
+<!-- Breadcrumb -->
+<ol class="breadcrumb">
+	<li><a href="#">Home</a></li>
+	<li class="active">Progress</li>
+</ol>
+<div class="jumbotron">
+	<p class="lead">Provide pagination links for your site or app with the multi-page pagination component, or the simpler pager alternative.</p>
+</div>
+<div class="card">
+	<div class="card-block">
+		<progress class="progress" value="0" max="100">0%</progress>
+		<progress class="progress progress-primary" value="25" max="100">25%</progress>
+		<progress class="progress progress-gray" value="50" max="100">50%</progress>
+		<progress class="progress progress-success" value="75" max="100">75%</progress>
+		<progress class="progress progress-danger" value="100" max="100">100%</progress>
+		<hr>
+		<progress class="progress progress-striped progress-primary" value="10" max="100">10%</progress>
+		<progress class="progress progress-striped progress-success" value="25" max="100">25%</progress>
+		<progress class="progress progress-striped progress-gray" value="50" max="100">50%</progress>
+		<progress class="progress progress-striped progress-warning" value="75" max="100">75%</progress>
+		<progress class="progress progress-striped progress-danger" value="100" max="100">100%</progress>
+	</div>
+</div>
+{% endblock %}

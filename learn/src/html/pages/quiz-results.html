@@ -1,0 +1,76 @@
+---
+title: Quiz Results
+slug: quiz-results
+---
+{% extends "layouts/fluid.html" %}
+
+{% block page %}
+<ol class="breadcrumb m-b-0">
+	<li><a href="index.html">Home</a></li>
+	<li class="active">Quiz Results</li>
+</ol>
+<div class="page-heading">
+	<div class="media">
+		<div class="media-left media-middle">
+			<img src="assets/images/vuejs.png" alt="" width="80" class="img-rounded">
+		</div>
+		<div class="media-body media-middle">
+			<h4 class="m-b-0"> Vue.js Deploy Quiz</h4>
+			<small class="text-muted">submited on 2nd Feb 2016</small> 
+		</div>
+		<div class="media-right media-middle">
+			<a href="take-quiz.html" class="btn btn-primary btn-rounded">Restart <i class="material-icons">refresh</i></a>
+		</div>	
+	</div>
+</div>
+
+<div class="card">
+	<ul class="list-group m-b-0">
+		<li class="list-group-item">
+			<div class="media">
+				<div class="media-left"><div class="text-muted-light">1.</div></div>
+				<div class="media-body">Installation</div>
+				<div class="media-right"><span class="label label-success">Correct</span></div>
+			</div>
+		</li>
+		<li class="list-group-item">
+			<div class="media">
+				<div class="media-left"><div class="text-muted-light">2.</div></div>
+				<div class="media-body">The MVC architectural pattern</div>
+				<div class="media-right"><span class="label label-success">Correct</span></div>
+			</div>
+		</li>
+		<li class="list-group-item">
+			<div class="media">
+				<div class="media-left"><div class="text-muted-light">3.</div></div>
+				<div class="media-body">Database Models</div>
+				<div class="media-right"><span class="label label-success">Correct</span></div>
+			</div>
+		</li>
+		<li class="list-group-item">
+			<div class="media">
+				<div class="media-left"><div class="text-muted-light">4.</div></div>
+				<div class="media-body">Database Access</div>
+				<div class="media-right"><span class="label label-danger">Wrong</span></div>
+			</div>
+		</li>
+		<li class="list-group-item">
+			<div class="media">
+				<div class="media-left"><div class="text-muted-light">5.</div></div>
+				<div class="media-body">Eloquent Basics</div>
+				<div class="media-right"><span class="label label-primary">Pending Review</span></div>
+			</div>
+		</li>
+		<li class="list-group-item">
+			<div class="media">
+				<div class="media-left"><div class="text-muted-light">6.</div></div>
+				<div class="media-body">Take Quiz</div>
+				<div class="media-right"><span class="label label-success">Correct</span></div>
+			</div>
+		</li>
+	</ul>
+	<div class="card card-footer">				
+		Total Score: <span class="h5 text-primary"><strong>340</strong></span>	
+	</div>
+</div>
+{% endblock %}

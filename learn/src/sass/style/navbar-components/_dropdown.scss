@@ -1,0 +1,7 @@
+.navbar .dropdown-menu {
+	margin: 0;
+	.dropdown-item.active {
+	  background: none;
+	  color: $brand-primary;
+	}
+}

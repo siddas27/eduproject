@@ -1,0 +1,92 @@
+---
+title: Cart
+slug: cart
+---
+{% extends "layouts/fluid.html" %}
+
+{% block page %}
+<ol class="breadcrumb">
+	<li><a href="index.html">Home</a></li>
+	<li class="active">Cart</li>
+</ol>
+<a href="browse-courses.html" class="m-b-1 btn btn-white btn-rounded">Back to Courses</a>
+<div class="card">
+	<table class="table m-b-0">
+		<thead>
+			<tr>
+				<th>Details</th>
+				<th width="100" class="center">Qty</th>
+				<th width="100" class="right">Total</th>
+				<th width="10"></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					<div class="media">
+						<div class="media-left hidden-sm-down">
+							<img src="assets/images/nodejs.png" alt="" width="80" class="img-rounded">
+						</div>
+						<div class="media-body media-middle">
+							<p class="m-b-0">
+								<a href="#">Node JS Course</a>
+							</p>
+							<small class="text-muted">Duration: 5 days</small>
+						</div>
+					</div>
+				</td>
+				<td class="center">1</td>
+				<td class="right">$25.00</td>
+				<td class="center"><a href="#" class="text-muted"><i class="material-icons md-18">close</i></a></td>
+			</tr>
+			<tr>
+				<td>
+					<div class="media">
+						<div class="media-left hidden-sm-down">
+							<img src="assets/images/gulp.png" alt="" width="80" class="img-rounded">
+						</div>
+						<div class="media-body media-middle">
+							<p class="m-b-0">
+								<a href="#">Gulp Full Course</a>
+							</p>
+							<small class="text-muted">Duration: 10 days</small>
+						</div>
+					</div>
+				</td>
+				<td class="center">1</td>
+				<td class="right">$15.00</td>
+				<td class="center"><a href="#" class="text-muted"><i class="material-icons md-18">close</i></a></td>
+			</tr>
+		</tbody>
+	</table>
+	<div class="p-a-1">
+		<div class="row">
+			<div class="col-md-4 col-md-offset-8 text-md-right">
+				<div class="row">
+					<div class="col-xs-6"><strong>Subtotal</strong></div>
+					<div class="col-xs-6 text-xs-right">
+						$40.00
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-6"><strong>Discount</strong></div>
+					<div class="col-xs-6 text-xs-right">
+						<span class="text-danger">20%</span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-6"><strong>Total</strong></div>
+					<div class="col-xs-6 text-xs-right">
+						$32.00
+					</div>
+				</div>
+			</div>	
+		</div>	
+	</div>
+	<div class="card-footer right bg-white">
+		<a href="pay.html" class="btn btn-primary btn-rounded">
+			Pay Now <i class="material-icons md-18">credit_card</i>
+		</a>	
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,110 @@
+---
+title: Instructor Quizes
+slug: instructor-quizes
+---
+{% extends "layouts/instructor-fluid.html" %}
+
+{% block page %}
+<ol class="breadcrumb m-b-0">
+	<li><a href="index.html">Home</a></li>
+	<li class="active">Quizes</li>
+</ol>
+<div class="media">
+	<div class="media-body media-middle">
+		<h1 class="page-heading h2">Quizes</h1>
+	</div>
+	<div class="media-right media-middle">
+		<a href="#" class="btn btn-success btn-rounded">New Quiz <i class="material-icons">add</i></a>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-9">
+		<div class="card-columns">
+			<div class="card">
+				<div class="card-block">
+					<div class="media m-b-05">
+						<div class="media-left media-middle">
+							<a href="instructor-quiz.html">
+								<img src="assets/images/vuejs.png" alt="Card image cap" width="80" class="img-rounded">	
+							</a>
+						</div>
+						<div class="media-body media-middle">
+							<h4 class="card-title m-b-0">Vue.js Deploy Quiz</h4>	
+							<small class="text-muted">25 Completed</small>
+						</div>
+					</div>
+				</div>
+				<div class="card-footer center">
+					<a href="instructor-quiz.html" class="btn btn-primary btn-sm pull-xs-left"><i class="material-icons">playlist_add_check</i> Review <span class="label text-primary bg-white">5</span></a>	
+					<a href="instructor-quiz-edit.html" class="btn btn-default btn-sm pull-xs-right"><i class="material-icons">edit</i> Edit </a>	
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-block">
+					<div class="media m-b-05">
+						<div class="media-left media-middle">
+							<a href="instructor-quiz.html">
+								<img src="assets/images/github.png" alt="Card image cap" width="80" class="img-rounded">	
+							</a>
+						</div>
+						<div class="media-body media-middle">
+							<h4 class="card-title m-b-0">
+								GitHub Basic Setup
+							</h4>		
+							<small class="text-muted">410 Completed</small>
+						</div>
+					</div>
+		
+				</div>
+				<div class="card-footer center">
+					<a href="instructor-quiz.html" class="btn btn-primary btn-sm pull-xs-left"><i class="material-icons">playlist_add_check</i> Review <span class="label text-primary bg-white">5</span></a>	
+					<a href="instructor-quiz-edit.html" class="btn btn-default btn-sm pull-xs-right"><i class="material-icons">edit</i> Edit </a>	
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-block">
+					<div class="media m-b-05">
+						<div class="media-left">
+							<a href="instructor-quiz.html">
+								<img src="assets/images/gulp.png" alt="Card image cap" width="80" class="img-rounded">	
+							</a>
+						</div>
+						<div class="media-body media-middle">
+							<h4 class="card-title m-b-0">
+								Gulp Front-End Boilerplate
+							</h4>		
+							<small class="text-muted">50 Completed</small>
+							
+						</div>
+					</div>
+				</div>
+				<div class="card-footer center">
+					<a href="instructor-quiz.html" class="btn btn-primary btn-sm pull-xs-left"><i class="material-icons">playlist_add_check</i> Review <span class="label text-primary bg-white">5</span></a>	
+					<a href="instructor-quiz-edit.html" class="btn btn-default btn-sm pull-xs-right"><i class="material-icons">edit</i> Edit </a>	
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-3">
+		<div class="card">
+			<ul class="list-group list-group-fit">
+				<li class="list-group-item active">
+					<a href="#">All</a>
+				</li>
+				<li class="list-group-item">
+					<a href="#">Vue.js</a>
+				</li>
+				<li class="list-group-item">
+					<a href="#">NodeJs</a>
+				</li>
+				<li class="list-group-item">
+					<a href="#">GitHub</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,18 @@
+<!-- Sidebar -->
+<div class="sidebar sidebar-left si-si-3 sidebar-visible-md-up sidebar-light ls-top-navbar-xs-up sidebar-transparent-md{% if sidebarOptions %} {{ sidebarOptions }}{% endif %}" id="sidebarLeft" data-scrollable>
+	<div class="sidebar-heading">DASHBOARDS</div>
+	<ul class="sidebar-menu">
+		<li class="sidebar-menu-item">
+			<a class="sidebar-menu-button" href="index.html">
+				<i class="sidebar-menu-icon material-icons">account_box</i> Student
+			</a>
+		</li>
+		<li class="sidebar-menu-item">
+			<a class="sidebar-menu-button" href="instructor-dashboard.html">
+				<i class="sidebar-menu-icon material-icons">school</i> Instructor
+			</a>
+		</li>
+	</ul>
+	{% include 'partials/sidebar.menu.components.html' %}
+</div>
+<!-- // END Sidebar -->

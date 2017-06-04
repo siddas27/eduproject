@@ -1,0 +1,156 @@
+---
+title: Cards
+slug: ui-cards
+---
+{% extends "layouts/components.html" %}
+
+{% block page %}
+<ol class="breadcrumb">
+	<li><a href="index.html">Home</a></li>
+	<li class="active">Cards</li>
+</ol>
+
+<div class="jumbotron">
+	<p class="lead">A card is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options.</p>
+</div>
+
+<div class="row m-b-2">
+	<div class="col-md-6">
+		<div class="card">
+			<div class="card-button-wrapper">
+				<div class="dropdown">
+					<a href="#" class="card-button" data-toggle="dropdown" aria-haspopup="true"
+						 aria-expanded="true"><i class="material-icons">more_vert</i></a>
+					<div class="dropdown-menu dropdown-menu-right">
+						<a class="dropdown-item" href="#">Action</a>
+						<a class="dropdown-item" href="#">Another action</a>
+						<a class="dropdown-item" href="#">Something else here</a>
+					</div>
+				</div>
+			</div>
+			<div class="card-block">
+				<h5 class="card-title">Card title</h5>
+				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				<a href="#" class="btn btn-primary">Button</a>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="card text-xs-center">
+			<div class="card-header">
+				Featured (header)
+			</div>
+			<div class="card-block">
+				<h4 class="card-title">Special title treatment</h4>
+				<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+				<a href="#" class="btn btn-primary">Go somewhere</a>
+			</div>
+			<div class="card-footer text-muted">
+				2 days ago (footer)
+			</div>
+		</div>
+	</div>
+</div>
+
+<h2 class="center">Background variants</h2>
+<p class="center lead">Cards include their own variant classes for quickly changing the background-color and border-color of a card. Darker colors require the use of .card-inverse.</p>
+
+<div class="row m-b-2">
+	<div class="col-md-6">
+		<div class="card card-primary center">
+			<div class="card-block">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="card card-success center">
+			<div class="card-block">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="card card-info center">
+			<div class="card-block">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="card card-warning center">
+			<div class="card-block">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="card card-red center">
+			<div class="card-block">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<h2 class="center">Card Groups</h2>
+<p class="center lead">Use card groups to render cards as a single, attached element with equal width and height columns.</p>
+
+<div class="card-group m-b-2">
+	<div class="card">
+		<div class="card-block">
+			<h4 class="card-title">Card title</h4>
+			<p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+					additional content. This content is a little bit longer.</p>
+			<p class="card-text">
+					<small class="text-muted">Last updated 3 mins ago</small>
+			</p>
+		</div>
+	</div>
+	<div class="card">
+		<div class="card-block">
+			<h4 class="card-title">Card title</h4>
+			<p class="card-text">This card has supporting text below as a natural lead-in to additional
+					content.</p>
+			<p class="card-text">
+					<small class="text-muted">Last updated 3 mins ago</small>
+			</p>
+		</div>
+	</div>
+	<div class="card">
+		<div class="card-block">
+			<h4 class="card-title">Card title</h4>
+			<p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+					additional content. This card has even longer content than the first to show that equal
+					height action.</p>
+			<p class="card-text">
+					<small class="text-muted">Last updated 3 mins ago</small>
+			</p>
+		</div>
+	</div>
+</div>
+
+<h2 class="center">Card Stats</h2>
+<p class="center lead">Various colors of card stats</p>
+
+<div class="card card-stats-primary">
+	<div class="card-block">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aliquid eos hic magni mollitia pariatur possimus quidem quis quo sunt?
+	</div>
+</div>
+<div class="card card-stats-success">
+	<div class="card-block">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aliquid eos hic magni mollitia pariatur possimus quidem quis quo sunt?
+	</div>
+</div>
+<div class="card card-stats-warning">
+	<div class="card-block">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aliquid eos hic magni mollitia pariatur possimus quidem quis quo sunt?
+	</div>
+</div>
+<div class="card card-stats-danger">
+	<div class="card-block">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aliquid eos hic magni mollitia pariatur possimus quidem quis quo sunt?
+	</div>
+</div>
+{% endblock %}

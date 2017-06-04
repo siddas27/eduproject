@@ -1,0 +1,7 @@
+.nav-tabs .nav-link, 
+.nav-pills .nav-link {
+	color: $text-muted;
+	&:hover {
+		color: $brand-primary;
+	}
+}

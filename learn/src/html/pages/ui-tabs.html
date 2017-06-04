@@ -1,0 +1,107 @@
+---
+title: Tabs
+slug: ui-tabs
+---
+{% extends "layouts/components.html" %}
+
+{% block page %}
+<!-- Breadcrumb -->
+<ol class="breadcrumb">
+	<li><a href="index.html">Home</a></li>
+	<li class="active">Tabs</li>
+</ol>
+<!-- // END Breadcrumb -->
+
+<div class="jumbotron text-center">
+	<p>The tabbable UI Component includes many formats & styling options.</p>
+</div>
+
+<h5>Tabs Default</h5>
+<div class="card">
+	<div class="card-block">
+		<ul class="nav nav-tabs">
+			<li class="nav-item">
+				<a class="nav-link active" href="#one" data-toggle="tab">One</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#two" data-toggle="tab">Two</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#three" data-toggle="tab">Three</a>
+			</li>
+		</ul>
+		<div class="tab-content p-a-1 m-b-1">
+			<div class="tab-pane active" id="one"> First Tab</div>
+			<div class="tab-pane" id="two"> Lorem ipsum dolor sit amet</div>
+			<div class="tab-pane" id="three"> Consectetur adipisicing elit. Rem, voluptates?</div>
+		</div>
+	</div>
+</div>
+
+<h5 class="m-t-2">Tabs Attached</h5>
+<div class="card">
+	<ul class="nav nav-tabs">
+		<li class="nav-item">
+			<a class="nav-link active" href="#first" data-toggle="tab">First</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="#second" data-toggle="tab">Second</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="#third" data-toggle="tab">Third</a>
+		</li>
+	</ul>
+	<div class="card-block tab-content">
+		<div class="tab-pane active" id="first"> Tabs in Card</div>
+		<div class="tab-pane" id="second"> Lorem ipsum dolor sit amet</div>
+		<div class="tab-pane" id="third"> Consectetur adipisicing elit. Rem, voluptates?</div>
+	</div>
+</div>
+
+<h5 class="m-t-2">Tabs with Dropdown</h5>
+<div class="card">
+	<div class="card-block">
+		<ul class="nav nav-tabs">
+			<li class="nav-item">
+				<a class="nav-link active" href="#">Active</a>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#">Action</a>
+					<a class="dropdown-item" href="#">Another action</a>
+					<a class="dropdown-item" href="#">Something else here</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#">Separated link</a>
+				</div>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Another link</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link disabled" href="#">Disabled</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<h5 class="m-t-2">Pills</h5>
+<div class="card">
+	<div class="card-block">
+		<ul class="nav nav-pills">
+			<li class="nav-item">
+				<a class="nav-link active" href="#">Active</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Link</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Another link</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link disabled" href="#">Disabled</a>
+			</li>
+		</ul>
+	</div>
+</div>
+{% endblock %}

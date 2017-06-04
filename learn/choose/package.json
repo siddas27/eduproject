@@ -1,0 +1,21 @@
+{
+  "name": "learnplus-choose",
+  "version": "1.0.0",
+  "description": "LearnPlus landing page",
+  "private": true,
+  "scripts": {
+    "copy-vendor": "copyfiles -f node_modules/adminplus/dist/* node_modules/bootstrap/dist/js/bootstrap.min.js node_modules/jquery/dist/jquery.min.js node_modules/tether/dist/js/tether.min.js vendor",
+    "deploy": "surge"
+  },
+  "author": "mosaicpro",
+  "license": "ISC",
+  "dependencies": {
+    "adminplus": "1.0.0-alpha.6",
+    "bootstrap": "4.0.0-alpha.2",
+    "jquery": "^2.2.0",
+    "tether": "^1.2.0"
+  },
+  "devDependencies": {
+    "copyfiles": "^0.2.1"
+  }
+}

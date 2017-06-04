@@ -1,0 +1,69 @@
+///////////////////////////////////
+// MATERIAL DESIGN COLOR PALETTE //
+///////////////////////////////////
+
+@import 'sass-md-colors/colors/variables';
+
+///////////////////////////////////////////////////////////////////////////
+// VARIABLE OVERRIDES MUST GO HERE, BEFORE LOADING ANY DEFAULT VARIABLES //
+///////////////////////////////////////////////////////////////////////////
+
+// i.e. $brand-primary: $red-500;
+
+$brand-primary:                     $blue-500 !default;
+$brand-danger:                      $red-500 !default;
+$brand-success:                     $green-400 !default;
+$brand-warning:                     $orange-400 !default;
+$brand-info:                        $light-blue-400 !default;
+
+$state-success-bg:                  lighten($brand-success, 35%) !default;
+$state-info-bg:                     lighten($brand-primary, 40%) !default;
+$state-warning-bg:                  lighten($brand-warning, 38%) !default;
+$state-danger-bg:                   lighten($brand-danger, 38%) !default;
+
+$link-color:                        $light-blue-500 !default;
+$body-bg:                           #f9f9f9 !default;
+$gray-light:                        #818a91 !default;
+$text-muted:                        $gray-light !default;
+$text-muted-light:                  lighten($text-muted, 20%) !default;
+
+$navbar-box-shadow:                 0 2px 3px rgba(0,0,0, .2) !default;
+
+$pagination-border-color:           #eee !default;
+
+$card-border-color:                 #eee !default;
+$card-nav-link:                     $text-muted !default;
+$card-nav-link-hover:               $brand-primary !default;
+
+$nav-tabs-active-link-hover-color:  $brand-primary !default;
+$nav-tabs-active-link-border-color: $brand-primary !default;
+$nav-tabs-border-color:             #efefef !default;
+$nav-disabled-link-color:           $text-muted-light !default;
+
+$btn-padding-y:                     4px !default;
+$btn-padding-x:                     10px !default;
+$btn-padding-y-sm:                  2px !default;
+$btn-padding-x-sm:                  5px !default;
+
+/////////////
+// SIDEBAR //
+/////////////
+
+$sidebar-light-bg:                  #fff !default;
+$sidebar-light-heading-color:       $text-muted-light !default;
+$sidebar-heading-spacing-y:         5px !default;
+
+$sm-light-button-color:             rgba(0, 0, 0, .54) !default;
+$sm-light-icon-color:               $text-muted !default;
+$sm-light-open-button-color:        rgba(0, 0, 0, .54) !default;
+$sm-light-hover-button-color:       rgba(0, 0, 0, .80) !default;
+$sm-light-hover-icon-color:         rgba(0, 0, 0, .80) !default;
+$sm-light-hover-button-bg:          transparent !default;
+$sm-light-open-bg:                  transparent !default;
+
+///////////////////////
+// DEFAULT VARIABLES //
+// AdminPlus Lite    //
+///////////////////////
+
+@import 'adminplus/src/sass/variables';

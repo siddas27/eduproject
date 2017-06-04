@@ -1,0 +1,81 @@
+---
+title: Calendar
+slug: calendar
+---
+{% extends "layouts/calendar.html" %}
+
+{% block page %}
+<!-- Breadcrumb -->
+<ol class="breadcrumb">
+	<li><a href="index.html">Home</a></li>
+	<li class="active">Calendar</li>
+</ol>
+
+<p>
+	<a href="#" class="btn btn-danger btn-rounded-deep" data-toggle="modal" data-target="#myModal"><i class="material-icons">add</i> <span class="icon-text">Add Event</span></a>
+</p>
+
+<!-- Calendar -->
+<div id="calendar"></div>
+{% endblock %}
+{% block footer %}
+<!--Add Event Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">New Event</h4>
+			</div>
+			<div class="modal-body">
+				<form action="">
+					<div class="form-group">
+						<label>Title</label>
+						<input type="text" class="form-control">
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label>Start</label>
+								<input type="text" class="form-control">
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label>End</label>
+								<input type="text" class="form-control">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label>Description</label>
+						<textarea name="details" class="form-control" rows="3"></textarea>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer center">
+				<button type="button" class="btn btn-success btn-rounded-deep">Save</button>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
+
+{% block vendor_styling %}
+	<!-- Vendor CSS -->
+	<link rel="stylesheet" href="examples/css/fullcalendar.min.css">
+{% endblock %}
+
+{% block vendor_scripts %}
+	<!-- Required by Calendar (fullcalendar) -->
+	<script src="assets/vendor/moment.min.js"></script>
+	<!-- Fullcalendar -->
+	<script src="assets/vendor/fullcalendar.min.js"></script>
+{% endblock%}
+
+{% block example_scripts %}
+	<!-- Init -->
+	<script src="examples/js/fullcalendar.js"></script>
+{% endblock %}

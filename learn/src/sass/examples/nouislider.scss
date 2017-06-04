@@ -1,0 +1,54 @@
+// VARIABLES & OVERRIDES
+@import '../style/variables';
+
+.noUi-handle {
+	border: none;
+	background: $brand-primary;
+	&.noUi-active {
+		background: #212121;
+		border: none;
+
+	}
+	&:focus {
+		border: none;
+	}
+	.slider-info & {
+		background: $brand-info;
+	}
+	.slider-success & {
+		background: $brand-success;
+	}
+	.slider-danger & {
+		background: $brand-danger;
+	}
+	.slider-warning & {
+		background: $brand-warning;
+	}
+}
+.noUi-target {
+	border-radius: 0;
+	height: 2px;
+}
+.noUi-background {
+	background: #c8c8c8;
+}
+.noUi-vertical {
+	width: 2px;
+}
+.noUi-horizontal {
+	height: 2px;
+	margin: 20px;
+	.noUi-handle {
+		top: -7px;
+	}
+}
+
+.noUi-horizontal .noUi-handle {
+	border-radius:50%;
+	width: 15px;
+	height: 15px;
+	box-shadow:none;
+	&:before, &:after {
+		display:none;
+	}
+}

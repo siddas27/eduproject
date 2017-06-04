@@ -1,0 +1,115 @@
+---
+title: Forum Thread
+slug: forum-thread
+---
+{% extends "layouts/invoice.html" %}
+
+{% block page %}
+<ol class="breadcrumb">
+	<li><a href="index.html">Home</a></li>
+	<li><a href="forum.html">Forum</a></li>
+	<li class="active">Can someone help me with the basic Setup?</li>
+</ol>
+<div class="media">
+	<div class="media-body media-middle">
+		<h1 class="page-title m-b-0 h2">Can someone help me with the basic Setup?</h1>
+		<p class="text-muted small">by <a href="#">Jennifer Hudson</a> | 2 days ago</p>
+	</div>
+	<div class="media-right media-middle">
+		<a href="#commentBox" class="btn btn-white btn-circle"><i class="material-icons">comment</i></a>
+	</div>
+</div>
+<div class="media">
+	<div class="media-left center">
+		<img src="assets/images/people/50/guy-8.jpg" alt="" class="img-circle" width="40">
+	</div>
+	<div class="media-body">
+		<div class="card">
+			<div class="p-a-1">
+				<p>
+					<a href="#">Adrian Demian</a> <small class="text-muted">2 min ago</small>	
+				</p>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores beatae quisquam iste maiores libero, corrupti totam saepe itaque quidem perspiciatis?
+				</p>
+				<a href="#" class="btn btn-sm btn-white text-muted "><i class="material-icons ">reply</i> Reply</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="media">
+	<div class="media-left center">
+		<img src="assets/images/people/50/guy-2.jpg" alt="" class="img-circle" width="40">
+	</div>
+	<div class="media-body">
+		<div class="card">
+			<div class="p-a-1">
+				<p><a href="#">Adrian Demian</a> <small class="text-muted">2 min ago</small></p>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores beatae quisquam iste maiores libero, corrupti totam saepe itaque quidem perspiciatis?
+				</p>
+				<a href="#" class="btn btn-sm btn-white text-muted "><i class="material-icons ">reply</i> Reply</a>
+			</div>
+		</div>
+		<div class="media">
+			<div class="media-left center">
+				<img src="assets/images/people/50/guy-6.jpg" alt="" class="img-circle" width="40">
+			</div>
+			<div class="media-body">
+				<div class="card">
+					<div class="p-a-1">
+						<p><a href="#">Adrian Demian</a> <small class="text-muted">2 min ago</small></p>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores beatae quisquam iste maiores libero, corrupti totam saepe itaque quidem perspiciatis?
+						</p>
+						<a href="#" class="btn btn-sm btn-white text-muted "><i class="material-icons ">reply</i> Reply</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="media">
+	<div class="media-left center">
+		<img src="assets/images/people/50/guy-4.jpg" alt="" class="img-circle" width="40">
+	</div>
+	<div class="media-body">
+		<div class="card">
+			<div class="p-a-1">
+				<p><a href="#">Adrian Demian</a> <small class="text-muted">2 min ago</small></p>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores beatae quisquam iste maiores libero, corrupti totam saepe itaque quidem perspiciatis?
+				</p>
+				<a href="#" class="btn btn-sm btn-white text-muted "><i class="material-icons ">reply</i> Reply</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="card" id="commentBox">
+	<div class="card-header">
+		<h4 class="card-title">Comment</h4>
+	</div>
+	<div class="card-body">
+		<textarea id="summernote"></textarea>
+	</div>
+</div>
+{% endblock %}
+
+{% block vendor_styling %}
+	<!-- Required by summernote -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontawesome/4.5.0/css/font-awesome.min.css">
+
+	<!-- Summernote WYSIWYG -->
+	<link rel="stylesheet" href="examples/css/summernote.min.css">
+{% endblock %}
+
+{% block vendor_scripts %}
+	<!-- Vendor JS -->
+	<script src="assets/vendor/summernote.min.js"></script>
+{% endblock%}
+
+{% block example_scripts %}
+	<!-- Init -->
+	<script src="examples/js/summernote.js"></script>
+	
+{% endblock %}

@@ -1,0 +1,32 @@
+.card > .nav-tabs .nav-item {
+	margin-bottom: 0px;
+}
+
+.card-title a {
+	color: $body-color;
+	&:hover {
+		color: $brand-primary;
+		text-decoration:none;
+	}
+}
+.card-block {
+	padding: .625rem;
+}
+.card .media-left {
+	padding-right: .625rem;
+}
+.card > {
+	.progress[value]::-webkit-progress-bar {
+	  
+	  border-radius: 0;
+	}
+	.progress[value]::-webkit-progress-value {
+	  border-top-left-radius: 0;
+	  border-bottom-left-radius: 0;
+	}
+	.progress[value="100"]::-webkit-progress-value {
+	  border-top-right-radius: 0;
+	  border-bottom-right-radius: 0;
+	}
+	border-radius:0;
+}
