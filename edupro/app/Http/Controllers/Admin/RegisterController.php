@@ -2,13 +2,16 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Admin;
+use App\Admin, Auth;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 
 class RegisterController extends Controller
 {
+
+
+	protected $redirectPath = 'admin/home';
 
 	public function showRegistrationForm()
 	{
