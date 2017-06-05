@@ -255,7 +255,7 @@
             <div class="card-header bg-white">
               <div class="media">
                 <div class="media-body">
-                  <h4 class="card-title">Course Stats</h4>
+                  <h4 class="card-title">Quizes Stats</h4>
                   <p class="card-subtitle">Sales Today</p>
                 </div>
                 <div class="media-right media-middle">
@@ -264,54 +264,18 @@
               </div>
             </div>
             <ul class="list-group list-group-fit m-b-0">
-              <li class="list-group-item">
-                <div class="media">
-                  <div class="media-body media-middle">
-                    <a href="take-course.html">Basics of HTML</a>
-                  </div>
-                  <div class="media-right media-middle">
-                    <div class="center">
-                      <span class="label label-pill label-primary">15</span>
+              <li class="list-group-item" ng-repeat="c in dash.quizes">
+                  <div class="media">
+                    <div class="media-body media-middle">
+                      <a href="take-quize.html"><% c.quizename %></a>
+                    </div>
+                    <div class="media-right media-middle">
+                      <div class="center">
+                        <span class="label label-pill label-<% c.label %>"><% c.lessons %></span>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </li>
-              <li class="list-group-item">
-                <div class="media">
-                  <div class="media-body media-middle">
-                    <a href="take-course.html">Angular in Steps</a>
-                  </div>
-                  <div class="media-right media-middle">
-                    <div class="center">
-                      <span class="label label-pill label-success">50</span>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="list-group-item">
-                <div class="media">
-                  <div class="media-body media-middle">
-                    <a href="take-course.html">Bootstrap Foundations</a>
-                  </div>
-                  <div class="media-right media-middle">
-                    <div class="center">
-                      <span class="label label-pill label-warning">14</span>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="list-group-item">
-                <div class="media">
-                  <div class="media-body media-middle">
-                    <a href="take-course.html">GitHub Basics</a>
-                  </div>
-                  <div class="media-right media-middle">
-                    <div class="center">
-                      <span class="label label-pill label-danger">14</span>
-                    </div>
-                  </div>
-                </div>
-              </li>
+                </li>
             </ul>
           </div>
           <div class="card">
@@ -398,6 +362,28 @@
                   },
                   {
                     coursename:'GitHub Basics', 
+                    lessons:'14',
+                    label:'default'
+                  }
+              ],
+            quizes : [
+                  {
+                    quizename:'Basics of HTML', 
+                    lessons:'15',
+                    label:'primary'
+                  },
+                  {
+                    quizename:'Angular in Steps', 
+                    lessons:'50',
+                    label:'success'
+                  },
+                  {
+                    quizename:'Bootstrap Foundations', 
+                    lessons:'14',
+                    label:'warning'
+                  },
+                  {
+                    quizename:'GitHub Basics', 
                     lessons:'14',
                     label:'default'
                   }

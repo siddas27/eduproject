@@ -21,7 +21,7 @@
 
 </head>
 
-<body class="layout-container ls-top-navbar si-l3-md-up">
+<body class="layout-container ls-top-navbar si-l3-md-up" ng-app="intro-courses">
 
   <!-- Navbar -->
   <nav class="navbar navbar-dark bg-primary navbar-full navbar-fixed-top">
@@ -187,7 +187,7 @@
   <!-- // END Sidebar -->
 
   <!-- Content -->
-  <div class="layout-content" data-scrollable>
+  <div class="layout-content" data-scrollable ng-controller="coursesCtrl">
     <div class="container-fluid">
 
       <ol class="breadcrumb m-b-0">
@@ -195,82 +195,26 @@
         <li class="active">Courses</li>
       </ol>
       <h1 class="page-heading h2">Manage Courses</h1>
-      <div class="card-columns">
+      <div class="card-columns" ng-repeat="c in dash.courses">
         <div class="card">
           <div class="card-header bg-white">
             <div class="media">
               <div class="media-left media-middle">
                 <a href="instructor-course-edit.html">
-                  <img src="assets/images/vuejs.png" alt="Card image cap" width="100" class="img-rounded">
+                  <img src="<% c.img %>" alt="Card image cap" width="100" class="img-rounded">
                 </a>
               </div>
               <div class="media-body media-middle">
-                <h4 class="card-title"><a href="instructor-course-edit.html">Learn VueJs</a></h4>
-                <span class="label label-primary">$1230</span> <span class="label label-default">34 SALES</span>
-              </div>
+                <h4 class="card-title"><a href="instructor-course-edit.html"><% c.coursename %></a></h4>
+                <span class="label label-primary" ng-bind="'$'+c.amount"></span> <span class="label label-default" ng-bind="c.sales+'SALES'"></span>
+              </div> 
               <div class="media-right media-middle">
                 <a href="instructor-course-edit.html" class="btn btn-white">Edit</a>
               </div>
             </div>
           </div>
         </div>
-        <div class="card">
-          <div class="card-header bg-white">
-            <div class="media">
-              <div class="media-left media-middle">
-                <a href="instructor-course-edit.html">
-                  <img src="assets/images/nodejs.png" alt="Card image cap" width="100" class="img-rounded">
-                </a>
-              </div>
-              <div class="media-body media-middle">
-                <h4 class="card-title"><a href="instructor-course-edit.html">Npm &amp; Gulp Advanced Workflow</a></h4>
-                <span class="label label-primary">$421</span> <span class="label label-default">12 SALES</span>
-              </div>
-              <div class="media-right media-middle">
-                <a href="instructor-course-edit.html" class="btn btn-white">Edit</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-header bg-white">
-            <div class="media">
-              <div class="media-left media-middle">
-                <a href="instructor-course-edit.html">
-                  <img src="assets/images/github.png" alt="Card image cap" width="100" class="img-rounded">
-                </a>
-              </div>
-              <div class="media-body media-middle">
-                <h4 class="card-title">
-                  <a href="instructor-course-edit.html">Github Webhooks for Beginners</a>
-                </h4>
-                <span class="label label-primary">$2191</span> <span class="label label-default">50 SALES</span>
-              </div>
-              <div class="media-right media-middle">
-                <a href="instructor-course-edit.html" class="btn btn-white">Edit</a>
-              </div>
-            </div>
 
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-header bg-white">
-            <div class="media">
-              <div class="media-left media-middle">
-                <a href="instructor-course-edit.html">
-                  <img src="assets/images/gulp.png" alt="Card image cap" width="100" class="img-rounded">
-                </a>
-              </div>
-              <div class="media-body media-middle">
-                <h4 class="card-title"><a href="instructor-course-edit.html">Gulp & Slush Workflows</a></h4>
-                <span class="label label-primary">$300</span> <span class="label label-default">5 SALES</span>
-              </div>
-              <div class="media-right media-middle">
-                <a href="instructor-course-edit.html" class="btn btn-white">Edit</a>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
       <nav class="center">
         <ul class="pagination pagination-sm">
@@ -311,6 +255,52 @@
 
   <!-- App JS -->
   <script src="assets/js/main.min.js"></script>
+  <script src="assets/js/angular.min.js"></script>
+  <script>
+    var app = angular.module("intro-courses", []).config(function($interpolateProvider){
+        $interpolateProvider.startSymbol('<%').endSymbol('%>');
+    }); 
+    app.controller("coursesCtrl", function($scope, $http) {
+
+        // $http({
+        //     method : "GET",
+        //     url : "data1.json"
+        // }).then(function mySuccess(response) {
+        //     $scope.courses = response.data.courses;
+        // }, function myError(response) {
+        //     $scope.myWelcome = response.statusText;
+        // });
+
+        $scope.dash={
+            courses : [
+                  {
+                    coursename:'Learn VueJs', 
+                    amount:'1235',
+                    sales:'21',
+                    img:'assets/images/vuejs.png'
+                  },
+                  {
+                    coursename:'Npm &amp; Gulp Advanced Workflow', 
+                    amount:'235',
+                    sales:'15',
+                    img:'assets/images/nodejs.png'
+                  },
+                  {
+                    coursename:'Github Webhooks for Beginners', 
+                    amount:'135',
+                    sales:'2',
+                    img:'assets/images/github.png'
+                  },
+                  {
+                    coursename:'Gulp & Slush Workflows', 
+                    amount:'125',
+                    sales:'1',
+                    img:'assets/images/gulp.png'
+                  }
+              ] 
+            }       
+    });
+  </script>
 
 </body>
 

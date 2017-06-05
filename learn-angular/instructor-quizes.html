@@ -21,7 +21,7 @@
 
 </head>
 
-<body class="layout-container ls-top-navbar si-l3-md-up">
+<body class="layout-container ls-top-navbar si-l3-md-up" ng-app="intro-quiz">
 
   <!-- Navbar -->
   <nav class="navbar navbar-dark bg-primary navbar-full navbar-fixed-top">
@@ -187,7 +187,7 @@
   <!-- // END Sidebar -->
 
   <!-- Content -->
-  <div class="layout-content" data-scrollable>
+  <div class="layout-content" data-scrollable ng-controller="quizesCtrl">
     <div class="container-fluid">
 
       <ol class="breadcrumb m-b-0">
@@ -199,74 +199,28 @@
           <h1 class="page-heading h2">Quizes</h1>
         </div>
         <div class="media-right media-middle">
-          <a href="#" class="btn btn-success btn-rounded">New Quiz <i class="material-icons">add</i></a>
+          <a href="instructor-quiz-edit.html" class="btn btn-success btn-rounded">New Quiz <i class="material-icons">add</i></a>
         </div>
       </div>
       <div class="row">
         <div class="col-md-9">
-          <div class="card-columns">
+          <div class="card-columns" ng-repeat="c in dash.quizes">
             <div class="card">
               <div class="card-block">
                 <div class="media m-b-05">
                   <div class="media-left media-middle">
                     <a href="instructor-quiz.html">
-                      <img src="assets/images/vuejs.png" alt="Card image cap" width="80" class="img-rounded">
+                      <img src="<% c.img %>" alt="Card image cap" width="80" class="img-rounded">
                     </a>
                   </div>
                   <div class="media-body media-middle">
-                    <h4 class="card-title m-b-0">Vue.js Deploy Quiz</h4>
-                    <small class="text-muted">25 Completed</small>
+                    <h4 class="card-title m-b-0"><% c.quizename %></h4>
+                    <small class="text-muted"><% c.completed %> Completed</small>
                   </div>
                 </div>
               </div>
               <div class="card-footer center">
-                <a href="instructor-quiz.html" class="btn btn-primary btn-sm pull-xs-left"><i class="material-icons">playlist_add_check</i> Review <span class="label text-primary bg-white">5</span></a>
-                <a href="instructor-quiz-edit.html" class="btn btn-default btn-sm pull-xs-right"><i class="material-icons">edit</i> Edit </a>
-                <div class="clearfix"></div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-block">
-                <div class="media m-b-05">
-                  <div class="media-left media-middle">
-                    <a href="instructor-quiz.html">
-                      <img src="assets/images/github.png" alt="Card image cap" width="80" class="img-rounded">
-                    </a>
-                  </div>
-                  <div class="media-body media-middle">
-                    <h4 class="card-title m-b-0">
-                      GitHub Basic Setup
-                    </h4>
-                    <small class="text-muted">410 Completed</small>
-                  </div>
-                </div>
-
-              </div>
-              <div class="card-footer center">
-                <a href="instructor-quiz.html" class="btn btn-primary btn-sm pull-xs-left"><i class="material-icons">playlist_add_check</i> Review <span class="label text-primary bg-white">5</span></a>
-                <a href="instructor-quiz-edit.html" class="btn btn-default btn-sm pull-xs-right"><i class="material-icons">edit</i> Edit </a>
-                <div class="clearfix"></div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-block">
-                <div class="media m-b-05">
-                  <div class="media-left">
-                    <a href="instructor-quiz.html">
-                      <img src="assets/images/gulp.png" alt="Card image cap" width="80" class="img-rounded">
-                    </a>
-                  </div>
-                  <div class="media-body media-middle">
-                    <h4 class="card-title m-b-0">
-                      Gulp Front-End Boilerplate
-                    </h4>
-                    <small class="text-muted">50 Completed</small>
-
-                  </div>
-                </div>
-              </div>
-              <div class="card-footer center">
-                <a href="instructor-quiz.html" class="btn btn-primary btn-sm pull-xs-left"><i class="material-icons">playlist_add_check</i> Review <span class="label text-primary bg-white">5</span></a>
+                <a href="instructor-quiz.html" class="btn btn-primary btn-sm pull-xs-left"><i class="material-icons">playlist_add_check</i> Review <span class="label text-primary bg-white"><% c.review %></span></a>
                 <a href="instructor-quiz-edit.html" class="btn btn-default btn-sm pull-xs-right"><i class="material-icons">edit</i> Edit </a>
                 <div class="clearfix"></div>
               </div>
@@ -275,19 +229,15 @@
         </div>
         <div class="col-md-3">
           <div class="card">
-            <ul class="list-group list-group-fit">
+            <ul class="list-group list-group-fit" >
               <li class="list-group-item active">
                 <a href="#">All</a>
               </li>
-              <li class="list-group-item">
-                <a href="#">Vue.js</a>
+              
+                <li class="list-group-item" ng-repeat="i in dash.items">
+                <a href="#"><% i.name %></a>
               </li>
-              <li class="list-group-item">
-                <a href="#">NodeJs</a>
-              </li>
-              <li class="list-group-item">
-                <a href="#">GitHub</a>
-              </li>
+              
             </ul>
           </div>
         </div>
@@ -308,6 +258,63 @@
 
   <!-- App JS -->
   <script src="assets/js/main.min.js"></script>
+  <script src="assets/js/angular.min.js"></script>
+  <script>
+    var app = angular.module("intro-quiz", []).config(function($interpolateProvider){
+        $interpolateProvider.startSymbol('<%').endSymbol('%>');
+    }); 
+    app.controller("quizesCtrl", function($scope, $http) {
+
+        // $http({
+        //     method : "GET",
+        //     url : "data1.json"
+        // }).then(function mySuccess(response) {
+        //     $scope.courses = response.data.courses;
+        // }, function myError(response) {
+        //     $scope.myWelcome = response.statusText;
+        // });
+
+        $scope.dash={
+            
+            quizes : [
+                  {
+                    quizename:'Vue.js Deploy Quiz', 
+                    completed:'15',
+                    review:'15',
+                    img:'assets/images/vuejs.png',
+                    label:'primary'
+                  },
+                  {
+                    quizename:'GitHub Basic Setup', 
+                    completed:'50',
+                    review:'5',
+                    img:'assets/images/github.png',
+                    label:'success'
+                  },
+                  {
+                    quizename:'Gulp Front-End Boilerplate', 
+                    completed:'14',
+                    review:'10',
+                    img:'assets/images/gulp.png',
+                    label:'warning'
+                  }
+              ],
+            items : [
+                  {
+                    name:'Vue.js'              
+                  },
+                  {
+                    name:'NodeJs'
+                  },
+                  {
+                    name:'GitHub'
+                  }
+            ]
+        }
+
+        
+    });
+  </script>
 
 </body>
 

@@ -21,7 +21,7 @@
 
 </head>
 
-<body class="layout-container ls-top-navbar si-l3-md-up">
+<body class="layout-container ls-top-navbar si-l3-md-up" ng-app="intro-profile">
 
   <!-- Navbar -->
   <nav class="navbar navbar-dark bg-primary navbar-full navbar-fixed-top">
@@ -187,7 +187,7 @@
   <!-- // END Sidebar -->
 
   <!-- Content -->
-  <div class="layout-content" data-scrollable>
+  <div class="layout-content" data-scrollable ng-controller="profileCtrl">
     <div class="container-fluid">
 
       <ol class="breadcrumb hidden-print">
@@ -199,8 +199,8 @@
         <a href="#" class="m-b-1">
           <img src="assets/images/people/110/guy-8.jpg" alt="" class="img-circle">
         </a>
-        <h1 class=" h2 m-b-0">Adrian Demian</h1>
-        <p class="lead text-muted m-b-0">Florida, USA</p>
+        <h1 class=" h2 m-b-0" ng-bind="fname + ' ' + lname"></h1>
+        <p class="lead text-muted m-b-0" ng-bind="location"></p>
         <div class="label label-primary">INSTRUCTOR</div>
         <hr>
         <h5 class="text-muted">Instructor Rating</h5>
@@ -213,39 +213,18 @@
         </p>
       </div>
       <hr class="m-a-0">
-      <h5 class="page-heading center text-muted">Courses by Adrian</h5>
-      <div class="card-columns">
+      <h5 class="page-heading center text-muted" ng-bind="'Courses by '+fname"></h5>
+      <div class="card-columns" ng-repeat="i in intro.courses">
         <div class="card">
           <div class="card-header bg-white">
             <div class="media">
               <div class="media-left media-middle">
                 <a href="take-course.html">
-                  <img src="assets/images/vuejs.png" alt="Card image cap" width="100" class="img-rounded">
+                  <img src="<% i.img %>" alt="Card image cap" width="100" class="img-rounded">
                 </a>
               </div>
               <div class="media-body media-middle">
-                <h4 class="card-title"><a href="take-course.html">Learn VueJs</a></h4>
-                <div>
-                  <i class="material-icons text-warning md-18">star</i>
-                  <i class="material-icons text-warning md-18">star</i>
-                  <i class="material-icons text-warning md-18">star</i>
-                  <i class="material-icons text-warning md-18">star</i>
-                  <i class="material-icons text-warning md-18">star_border</i>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-header bg-white">
-            <div class="media">
-              <div class="media-left media-middle">
-                <a href="take-course.html">
-                  <img src="assets/images/nodejs.png" alt="Card image cap" width="100" class="img-rounded">
-                </a>
-              </div>
-              <div class="media-body media-middle">
-                <h4 class="card-title"><a href="take-course.html">Npm &amp; Gulp Advanced Workflow</a></h4>
+                <h4 class="card-title"><a href="take-course.html"><% i.coursename %></a></h4>
                 <div>
                   <i class="material-icons text-warning md-18">star</i>
                   <i class="material-icons text-warning md-18">star</i>
@@ -258,48 +237,6 @@
           </div>
         </div>
 
-        <div class="card">
-          <div class="card-header bg-white">
-            <div class="media">
-              <div class="media-left media-middle">
-                <a href="take-course.html">
-                  <img src="assets/images/github.png" alt="Card image cap" width="100" class="img-rounded">
-                </a>
-              </div>
-              <div class="media-body media-middle">
-                <h4 class="card-title"><a href="take-course.html">Github Webhooks for Beginners</a></h4>
-                <div>
-                  <i class="material-icons text-warning md-18">star</i>
-                  <i class="material-icons text-warning md-18">star</i>
-                  <i class="material-icons text-warning md-18">star</i>
-                  <i class="material-icons text-warning md-18">star</i>
-                  <i class="material-icons text-warning md-18">star_border</i>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-header bg-white">
-            <div class="media">
-              <div class="media-left media-middle">
-                <a href="take-course.html">
-                  <img src="assets/images/gulp.png" alt="Card image cap" width="100" class="img-rounded">
-                </a>
-              </div>
-              <div class="media-body media-middle">
-                <h4 class="card-title"><a href="take-course.html">Gulp &amp; Slush Workflows</a></h4>
-                <div>
-                  <i class="material-icons text-warning md-18">star</i>
-                  <i class="material-icons text-warning md-18">star</i>
-                  <i class="material-icons text-warning md-18">star</i>
-                  <i class="material-icons text-warning md-18">star</i>
-                  <i class="material-icons text-warning md-18">star_border</i>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
 
     </div>
@@ -317,6 +254,53 @@
 
   <!-- App JS -->
   <script src="assets/js/main.min.js"></script>
+  <script src="assets/js/angular.min.js"></script>
+  <script>
+    var app = angular.module("intro-profile", []).config(function($interpolateProvider){
+        $interpolateProvider.startSymbol('<%').endSymbol('%>');
+    }); 
+    app.controller("profileCtrl", function($scope, $http) {
+
+        // $http({
+        //     method : "GET",
+        //     url : "data1.json"
+        // }).then(function mySuccess(response) {
+        //     $scope.courses = response.data.courses;
+        // }, function myError(response) {
+        //     $scope.myWelcome = response.statusText;
+        // });
+
+        $scope.fname="Sid";
+        $scope.lname="das";
+        $scope.location="USA";
+        $scope.intro={
+          courses: [
+                  {
+                    coursename:'Learn VueJs',
+                    img:'assets/images/vuejs.png',
+                    stars:''
+                  },
+                  {
+                    coursename:'Npm &amp; Gulp Advanced Workflow',
+                    img:'assets/images/nodejs.png',
+                    stars:''
+                  },
+                  {
+                    coursename:'Github Webhooks for Beginners',
+                    img:'assets/images/github.png',
+                    stars:''
+                  },
+                  {
+                    coursename:'Gulp &amp; Slush Workflows',
+                    img:'assets/images/gulp.png',
+                    stars:''
+                  }
+          ]
+        }
+
+        
+    });
+  </script>
 
 </body>
 
