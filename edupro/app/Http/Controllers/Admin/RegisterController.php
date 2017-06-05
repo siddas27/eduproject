@@ -53,11 +53,11 @@ class RegisterController extends Controller
         ]);
     }
 
-     //Get the guard to authenticate Seller
-   protected function guard()
-   {
-       return Auth::guard('web_seller');
-   }
+     //Get the guard to authenticate Admin
+	protected function guard()
+	{
+		return Auth::guard('admin');
+	}
 
 
 }

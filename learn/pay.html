@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html class="bootstrap-layout">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Pay</title>
+
+  <!-- Prevent the demo from appearing in search engines (REMOVE THIS) -->
+  <meta name="robots" content="noindex">
+
+  <!-- Material Design Icons  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Roboto Web Font -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+
+  <!-- App CSS -->
+  <link type="text/css" href="assets/css/style.min.css" rel="stylesheet">
+
+  <!-- Vendor CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/fontawesome/4.5.0/css/font-awesome.min.css">
+
+</head>
+
+<body class="layout-container ls-top-navbar si-l3-md-up">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-dark bg-primary navbar-full navbar-fixed-top">
+
+    <!-- Toggle sidebar -->
+    <button class="navbar-toggler pull-xs-left" type="button" data-toggle="sidebar" data-target="#sidebarLeft"><span class="material-icons">menu</span></button>
+
+    <!-- Brand -->
+    <a href="index.html" class="navbar-brand"><i class="material-icons">school</i> LearnPlus</a>
+
+    <!-- Search -->
+    <form class="form-inline pull-xs-left hidden-sm-down">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search">
+        <span class="input-group-btn"><button class="btn" type="button"><i class="material-icons">search</i></button></span>
+      </div>
+    </form>
+    <!-- // END Search -->
+
+    <ul class="nav navbar-nav hidden-sm-down">
+
+      <!-- Menu -->
+      <li class="nav-item">
+        <a class="nav-link" href="forum.html">Forum</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="get-help.html">Get Help</a>
+      </li>
+    </ul>
+
+    <!-- Menu -->
+    <ul class="nav navbar-nav pull-xs-right">
+
+      <li class="nav-item">
+        <a href="cart.html" class="nav-link">
+          <i class="material-icons">shopping_cart</i>
+        </a>
+      </li>
+
+      <!-- User dropdown -->
+      <li class="nav-item dropdown">
+        <a class="nav-link active dropdown-toggle p-a-0" data-toggle="dropdown" href="#" role="button" aria-haspopup="false">
+          <img src="assets/images/people/50/guy-6.jpg" alt="Avatar" class="img-circle" width="40">
+        </a>
+        <div class="dropdown-menu dropdown-menu-right dropdown-menu-list" aria-labelledby="Preview">
+          <a class="dropdown-item" href="account-edit.html"><i class="material-icons md-18">lock</i> <span class="icon-text">Edit Account</span></a>
+          <a class="dropdown-item" href="profile.html"><i class="material-icons md-18">person</i> <span class="icon-text">Public Profile</span></a>
+          <a class="dropdown-item" href="login.html">Logout</a>
+        </div>
+      </li>
+      <!-- // END User dropdown -->
+
+    </ul>
+    <!-- // END Menu -->
+
+  </nav>
+  <!-- // END Navbar -->
+  <!-- Sidebar -->
+  <div class="sidebar sidebar-left sidebar-light sidebar-visible-md-up si-si-3 ls-top-navbar-xs-up sidebar-transparent-md" id="sidebarLeft" data-scrollable>
+    <div class="sidebar-heading">APPLICATIONS</div>
+    <ul class="sidebar-menu">
+      <li class="sidebar-menu-item">
+        <a class="sidebar-menu-button" href="instructor-dashboard.html">
+          <i class="sidebar-menu-icon material-icons">school</i> Instructor
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a class="sidebar-menu-button" href="index.html">
+          <i class="sidebar-menu-icon material-icons">account_box</i> Student
+        </a>
+      </li>
+    </ul>
+    <div class="sidebar-heading">Student</div>
+    <ul class="sidebar-menu">
+      <li class="sidebar-menu-item">
+        <a class="sidebar-menu-button" href="browse-courses.html">
+          <i class="sidebar-menu-icon material-icons">search</i> Browse Courses
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a class="sidebar-menu-button" href="view-course.html">
+          <i class="sidebar-menu-icon material-icons">import_contacts</i> View Course
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a class="sidebar-menu-button" href="take-course.html">
+          <i class="sidebar-menu-icon material-icons">class</i> Take Course
+          <span class="sidebar-menu-label label label-default">PRO</span>
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a class="sidebar-menu-button" href="take-quiz.html">
+          <i class="sidebar-menu-icon material-icons">dvr</i> Take a Quiz
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a class="sidebar-menu-button" href="quiz-results.html">
+          <i class="sidebar-menu-icon material-icons">poll</i> Quiz Results
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a class="sidebar-menu-button" href="account-edit.html">
+          <i class="sidebar-menu-icon material-icons">account_box</i> Edit Account
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a class="sidebar-menu-button" href="my-courses.html">
+          <i class="sidebar-menu-icon material-icons">school</i> My Courses
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a class="sidebar-menu-button" href="chat.html">
+          <i class="sidebar-menu-icon material-icons">comment</i> Messages
+          <span class="sidebar-menu-label label label-default">2</span>
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a class="sidebar-menu-button" href="billing.html">
+          <i class="sidebar-menu-icon material-icons">monetization_on</i> Billing
+          <span class="sidebar-menu-label label label-default">$25</span>
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a class="sidebar-menu-button" href="login.html">
+          <i class="sidebar-menu-icon material-icons">lock_open</i> Logout
+        </a>
+      </li>
+    </ul>
+    <!-- Components menu -->
+    <div class="sidebar-heading">UI Components</div>
+    <ul class="sidebar-menu">
+      <li class="sidebar-menu-item">
+        <a class="sidebar-menu-button" href="#">
+          <i class="sidebar-menu-icon material-icons">tune</i> UI Components
+        </a>
+        <ul class="sidebar-submenu sm-condensed">
+          <li class="sidebar-menu-item">
+            <a class="sidebar-menu-button" href="ui-buttons.html">Buttons</a>
+          </li>
+          <li class="sidebar-menu-item">
+            <a class="sidebar-menu-button" href="ui-cards.html">Cards</a>
+          </li>
+          <li class="sidebar-menu-item">
+            <a class="sidebar-menu-button" href="ui-tabs.html">Tabs</a>
+          </li>
+          <li class="sidebar-menu-item">
+            <a class="sidebar-menu-button" href="ui-tree.html">Tree</a>
+          </li>
+          <li class="sidebar-menu-item">
+            <a class="sidebar-menu-button" href="ui-nestable.html">Nestable</a>
+          </li>
+          <li class="sidebar-menu-item">
+            <a class="sidebar-menu-button" href="ui-notifications.html">Notifications</a>
+          </li>
+          <li class="sidebar-menu-item">
+            <a class="sidebar-menu-button" href="ui-progress.html">Progress Bars</a>
+          </li>
+          <li class="sidebar-menu-item">
+            <a class="sidebar-menu-button" href="ui-forms.html">Forms</a>
+          </li>
+          <li class="sidebar-menu-item">
+            <a class="sidebar-menu-button" href="ui-tables.html">Tables</a>
+          </li>
+          <li class="sidebar-menu-item">
+            <a class="sidebar-menu-button" href="ui-charts.html">Charts</a>
+          </li>
+          <li class="sidebar-menu-item">
+            <a class="sidebar-menu-button" href="ui-calendar.html">Calendar</a>
+          </li>
+          <li class="sidebar-menu-item">
+            <a class="sidebar-menu-button" href="ui-maps-vector.html">Maps Vector</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <!-- // END Components Menu -->
+  </div>
+  <!-- // END Sidebar -->
+
+  <!-- Content -->
+  <div class="layout-content" data-scrollable>
+    <div class="container-fluid">
+
+      <ol class="breadcrumb m-b-0">
+        <li><a href="#">Home</a></li>
+        <li class="active">Pay</li>
+      </ol>
+      <h4 class="page-heading center">Make Payment</h4>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <div class="card">
+            <div class="card-body">
+              <ul class="list-group m-b-0">
+                <li class="list-group-item">
+                  <div class="media">
+                    <div class="media-left">
+                      <span class="btn btn-default btn-circle"><i class="material-icons">credit_card</i></span>
+                    </div>
+                    <div class="media-body media-middle">
+                      <p class="m-b-0">**** **** **** 2422</p>
+                      <small class="text-muted">Updated on 12/02/2016</small>
+                    </div>
+                    <div class="media-right media-middle">
+                      <a href="#" class="btn btn-primary btn-sm">Pay Now</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="media">
+                    <div class="media-left">
+                      <span class="btn btn-white btn-circle"><i class="material-icons">credit_card</i></span>
+                    </div>
+                    <div class="media-body media-middle">
+                      <p class="m-b-0">**** **** **** 6321</p>
+                      <small class="text-muted">Updated on 11/01/2016</small>
+                    </div>
+                    <div class="media-right media-middle">
+                      <a href="#" class="btn btn-primary btn-sm">Pay Now</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="media">
+                    <div class="media-left">
+                      <span class="btn btn-white btn-circle">
+									<i class="fa fa-paypal"></i>
+								</span>
+                    </div>
+                    <div class="media-body media-middle">
+                      PayPal
+                    </div>
+                    <div class="media-right media-middle">
+                      <a href="#" class="btn btn-default btn-sm">Pay Now</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <p class="text-muted center">or</p>
+          <div class="card">
+            <form action="#" class="form-horizontal">
+              <div class="card-block">
+                <div class="form-group">
+                  <label>Card Number:</label>
+                  <input type="text" class="form-control" placeholder="XXXX XXXX XXXX XXXX XXXX">
+                </div>
+                <div class="form-group row">
+                  <label for="" class="form-control-label col-md-4">CVC:</label>
+                  <div class="col-md-8">
+                    <input type="text" class="form-control" placeholder="123" style="width:80px">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="" class="form-control-label col-md-4">Expires:</label>
+                  <div class="col-md-8">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <select class="c-select form-control">
+                          <option value="1">January</option>
+                          <option value="2">February</option>
+                          <option value="3">March</option>
+                          <option value="4">April</option>
+                          <option value="5">May</option>
+                          <option value="6">June</option>
+                          <option value="7">July</option>
+                          <option value="8">August</option>
+                          <option value="9">September</option>
+                          <option value="10">October</option>
+                          <option value="11">Novemeber</option>
+                          <option value="12">December</option>
+                        </select>
+                      </div>
+                      <div class="col-md-6">
+                        <select class="c-select form-control">
+                          <option value="1" selected>2016</option>
+                          <option value="2">2017</option>
+                          <option value="3">2018</option>
+                          <option value="3">2019</option>
+                          <option value="3">2020</option>
+                          <option value="3">2021</option>
+                          <option value="3">2022</option>
+                          <option value="3">2023</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer center">
+                <button type="submit" class="btn btn-success btn-rounded">Make Payment</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- jQuery -->
+  <script src="assets/vendor/jquery.min.js"></script>
+
+  <!-- Bootstrap -->
+  <script src="assets/vendor/tether.min.js"></script>
+  <script src="assets/vendor/bootstrap.min.js"></script>
+
+  <!-- AdminPlus -->
+  <script src="assets/vendor/adminplus.js"></script>
+
+  <!-- App JS -->
+  <script src="assets/js/main.min.js"></script>
+
+</body>
+
+</html>

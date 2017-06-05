@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html class="bootstrap-layout">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Profile</title>
+
+  <!-- Prevent the demo from appearing in search engines (REMOVE THIS) -->
+  <meta name="robots" content="noindex">
+
+  <!-- Material Design Icons  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Roboto Web Font -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+
+  <!-- App CSS -->
+  <link type="text/css" href="assets/css/style.min.css" rel="stylesheet">
+
+</head>
+
+<body class="layout-container ls-top-navbar si-l3-md-up">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-dark bg-primary navbar-full navbar-fixed-top">
+
+    <!-- Toggle sidebar -->
+    <button class="navbar-toggler pull-xs-left" type="button" data-toggle="sidebar" data-target="#sidebarLeft"><span class="material-icons">menu</span></button>
+
+    <!-- Brand -->
+    <a href="index.html" class="navbar-brand"><i class="material-icons">school</i> LearnPlus</a>
+
+    <!-- Search -->
+    <form class="form-inline pull-xs-left hidden-sm-down">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search">
+        <span class="input-group-btn"><button class="btn" type="button"><i class="material-icons">search</i></button></span>
+      </div>
+    </form>
+    <!-- // END Search -->
+
+    <ul class="nav navbar-nav hidden-sm-down">
+
+      <!-- Menu -->
+      <li class="nav-item">
+        <a class="nav-link" href="forum.html">Forum</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="get-help.html">Get Help</a>
+      </li>
+    </ul>
+
+    <!-- Menu -->
+    <ul class="nav navbar-nav pull-xs-right">
+
+      <li class="nav-item">
+        <a href="cart.html" class="nav-link">
+          <i class="material-icons">shopping_cart</i>
+        </a>
+      </li>
+
+      <!-- User dropdown -->
+      <li class="nav-item dropdown">
+        <a class="nav-link active dropdown-toggle p-a-0" data-toggle="dropdown" href="#" role="button" aria-haspopup="false">
+          <img src="assets/images/people/50/guy-6.jpg" alt="Avatar" class="img-circle" width="40">
+        </a>
+        <div class="dropdown-menu dropdown-menu-right dropdown-menu-list" aria-labelledby="Preview">
+          <a class="dropdown-item" href="account-edit.html"><i class="material-icons md-18">lock</i> <span class="icon-text">Edit Account</span></a>
+          <a class="dropdown-item" href="profile.html"><i class="material-icons md-18">person</i> <span class="icon-text">Public Profile</span></a>
+          <a class="dropdown-item" href="login.html">Logout</a>
+        </div>
+      </li>
+      <!-- // END User dropdown -->
+
+    </ul>
+    <!-- // END Menu -->
+
+  </nav>
+  <!-- // END Navbar -->
+  <!-- Sidebar -->
+  <div class="sidebar sidebar-left sidebar-light sidebar-visible-md-up si-si-3 ls-top-navbar-xs-up sidebar-transparent-md" id="sidebarLeft" data-scrollable>
+    <div class="sidebar-heading">APPLICATIONS</div>
+    <ul class="sidebar-menu">
+      <li class="sidebar-menu-item">
+        <a class="sidebar-menu-button" href="instructor-dashboard.html">
+          <i class="sidebar-menu-icon material-icons">school</i> Instructor
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a class="sidebar-menu-button" href="index.html">
+          <i class="sidebar-menu-icon material-icons">account_box</i> Student
+        </a>
+      </li>
+    </ul>
+    <div class="sidebar-heading">Student</div>
+    <ul class="sidebar-menu">
+      <li class="sidebar-menu-item">
+        <a class="sidebar-menu-button" href="browse-courses.html">
+          <i class="sidebar-menu-icon material-icons">search</i> Browse Courses
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a class="sidebar-menu-button" href="view-course.html">
+          <i class="sidebar-menu-icon material-icons">import_contacts</i> View Course
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a class="sidebar-menu-button" href="take-course.html">
+          <i class="sidebar-menu-icon material-icons">class</i> Take Course
+          <span class="sidebar-menu-label label label-default">PRO</span>
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a class="sidebar-menu-button" href="take-quiz.html">
+          <i class="sidebar-menu-icon material-icons">dvr</i> Take a Quiz
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a class="sidebar-menu-button" href="quiz-results.html">
+          <i class="sidebar-menu-icon material-icons">poll</i> Quiz Results
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a class="sidebar-menu-button" href="account-edit.html">
+          <i class="sidebar-menu-icon material-icons">account_box</i> Edit Account
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a class="sidebar-menu-button" href="my-courses.html">
+          <i class="sidebar-menu-icon material-icons">school</i> My Courses
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a class="sidebar-menu-button" href="chat.html">
+          <i class="sidebar-menu-icon material-icons">comment</i> Messages
+          <span class="sidebar-menu-label label label-default">2</span>
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a class="sidebar-menu-button" href="billing.html">
+          <i class="sidebar-menu-icon material-icons">monetization_on</i> Billing
+          <span class="sidebar-menu-label label label-default">$25</span>
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a class="sidebar-menu-button" href="login.html">
+          <i class="sidebar-menu-icon material-icons">lock_open</i> Logout
+        </a>
+      </li>
+    </ul>
+    <!-- Components menu -->
+    <div class="sidebar-heading">UI Components</div>
+    <ul class="sidebar-menu">
+      <li class="sidebar-menu-item">
+        <a class="sidebar-menu-button" href="#">
+          <i class="sidebar-menu-icon material-icons">tune</i> UI Components
+        </a>
+        <ul class="sidebar-submenu sm-condensed">
+          <li class="sidebar-menu-item">
+            <a class="sidebar-menu-button" href="ui-buttons.html">Buttons</a>
+          </li>
+          <li class="sidebar-menu-item">
+            <a class="sidebar-menu-button" href="ui-cards.html">Cards</a>
+          </li>
+          <li class="sidebar-menu-item">
+            <a class="sidebar-menu-button" href="ui-tabs.html">Tabs</a>
+          </li>
+          <li class="sidebar-menu-item">
+            <a class="sidebar-menu-button" href="ui-tree.html">Tree</a>
+          </li>
+          <li class="sidebar-menu-item">
+            <a class="sidebar-menu-button" href="ui-nestable.html">Nestable</a>
+          </li>
+          <li class="sidebar-menu-item">
+            <a class="sidebar-menu-button" href="ui-notifications.html">Notifications</a>
+          </li>
+          <li class="sidebar-menu-item">
+            <a class="sidebar-menu-button" href="ui-progress.html">Progress Bars</a>
+          </li>
+          <li class="sidebar-menu-item">
+            <a class="sidebar-menu-button" href="ui-forms.html">Forms</a>
+          </li>
+          <li class="sidebar-menu-item">
+            <a class="sidebar-menu-button" href="ui-tables.html">Tables</a>
+          </li>
+          <li class="sidebar-menu-item">
+            <a class="sidebar-menu-button" href="ui-charts.html">Charts</a>
+          </li>
+          <li class="sidebar-menu-item">
+            <a class="sidebar-menu-button" href="ui-calendar.html">Calendar</a>
+          </li>
+          <li class="sidebar-menu-item">
+            <a class="sidebar-menu-button" href="ui-maps-vector.html">Maps Vector</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <!-- // END Components Menu -->
+  </div>
+  <!-- // END Sidebar -->
+
+  <!-- Content -->
+  <div class="layout-content" data-scrollable>
+    <div class="container-fluid">
+
+      <ol class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li class="active">Profile</li>
+      </ol>
+      <div class="center">
+        <p>
+          <a href="#">
+            <img src="assets/images/people/110/guy-2.jpg" alt="" class="img-circle">
+          </a>
+        </p>
+        <h1 class=" h2 m-b-0">Andrew Brain</h1>
+        <p class="lead text-muted m-b-0">London, UK</p>
+        <p><span class="label label-default">STUDENT</span></p>
+      </div>
+      <hr>
+      <div class="card-columns">
+        <div class="card">
+          <div class="card-header bg-white">
+            <div class="media">
+              <div class="media-left">
+                <img src="assets/images/vuejs.png" alt="" class="img-rounded" width="100">
+              </div>
+              <div class="media-body media-middle">
+                <h4 class="card-title"><a href="take-course.html">VueJs</a></h4>
+                <span class="label label-primary">ADVANCED</span>
+              </div>
+            </div>
+          </div>
+          <ul class="list-group list-group-fit">
+            <li class="list-group-item">
+              <a href="#"><span class="pull-xs-right"><i class="material-icons md-18">check</i></span>Basics of Vue.js</a>
+            </li>
+            <li class="list-group-item">
+              <a href="#"><span class="pull-xs-right"><i class="material-icons md-18">check</i></span>Intermediate Vue.js</a>
+            </li>
+            <li class="list-group-item">
+              <a href="#"><span class="pull-xs-right"><i class="material-icons md-18">check</i></span>Realtime Apps with Vue.js</a>
+            </li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-header bg-white">
+            <div class="media">
+              <div class="media-left">
+                <img src="assets/images/nodejs.png" alt="" class="img-rounded" width="100">
+              </div>
+              <div class="media-body media-middle">
+                <h4 class="card-title"><a href="take-course.html">NodeJs</a></h4>
+                <span class="label label-success">Beginner</span>
+              </div>
+            </div>
+          </div>
+          <ul class="list-group list-group-fit">
+            <li class="list-group-item">
+              <a href="#"><span class="pull-xs-right"><i class="material-icons md-18">check</i></span>Getting started with Node</a>
+            </li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-header bg-white">
+            <div class="media">
+              <div class="media-left">
+                <img src="assets/images/github.png" alt="" class="img-rounded" width="100">
+              </div>
+              <div class="media-body media-middle">
+                <h4 class="card-title"><a href="take-course.html">GitHub</a></h4>
+                <span class="label label-warning">Intermediate</span>
+              </div>
+            </div>
+          </div>
+          <ul class="list-group list-group-fit">
+            <li class="list-group-item">
+              <a href="#"><span class="pull-xs-right"><i class="material-icons md-18">check</i></span>Github Step by Step</a>
+            </li>
+            <li class="list-group-item">
+              <a href="#"><span class="pull-xs-right"><i class="material-icons md-18">check</i></span>Working as a Team with GitHub</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3 center">
+          <h4 class="m-b-0">Rewards</h4>
+          <p class="text-muted ">Adrian's achievements</p>
+          <div class="btn btn-primary btn-circle"><i class="material-icons">thumb_up</i></div>
+          <div class="btn btn-danger btn-circle"><i class="material-icons">grade</i></div>
+          <div class="btn btn-success btn-circle"><i class="material-icons">bubble_chart</i></div>
+          <div class="btn btn-warning btn-circle"><i class="material-icons">keyboard_voice</i></div>
+          <div class="btn btn-info btn-circle"><i class="material-icons">event_available</i></div>
+          <br>
+          <br>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- jQuery -->
+  <script src="assets/vendor/jquery.min.js"></script>
+
+  <!-- Bootstrap -->
+  <script src="assets/vendor/tether.min.js"></script>
+  <script src="assets/vendor/bootstrap.min.js"></script>
+
+  <!-- AdminPlus -->
+  <script src="assets/vendor/adminplus.js"></script>
+
+  <!-- App JS -->
+  <script src="assets/js/main.min.js"></script>
+
+</body>
+
+</html>
